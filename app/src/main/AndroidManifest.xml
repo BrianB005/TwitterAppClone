@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.brianbett.twitter">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Twitter"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/notFullScreen"
+        tools:targetApi="31">
+        <activity
+            android:name=".CreateImageReplyActivity"
+            android:exported="false"
+            android:theme="@style/fullScreen"
+            android:parentActivityName=".MainActivity"
+            />
+        <activity
+            android:name=".CreateImageTweetActivity"
+            android:exported="false"
+            android:theme="@style/fullScreen"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false"
+            android:parentActivityName=".MyProfileActivity"
+            android:theme="@style/fullScreen" />
+        <activity
+            android:name=".FollowingActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/fullScreen" />
+        <activity
+            android:name=".AddFollowersActivity"
+            android:exported="false"
+            android:label="Connect"
+            android:parentActivityName=".FollowingActivity" />
+        <activity
+            android:name=".FollowersActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/fullScreen" />
+        <activity
+            android:name=".CreateTweetActivity"
+            android:exported="false"
+            android:theme="@style/fullScreen" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:label="@null" />
+        <activity
+            android:name=".RegisterActivityFive"
+            android:exported="false"
+            android:label="@null" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/fullScreen" />
+        <activity
+            android:name=".RegisterActivityFour"
+            android:exported="false"
+            android:label="@null"
+            android:parentActivityName=".RegisterActivityThree"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".RegisterActivityThree"
+            android:exported="false"
+            android:label="@null"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".RegisterActivityTwo"
+            android:exported="false"
+            android:label="@null"
+            android:parentActivityName=".RegisterActivityOne" />
+        <activity
+            android:name=".RegisterActivityOne"
+            android:exported="false"
+            android:label="@null"
+            android:roundIcon="@drawable/twitter_icon3"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyProfileActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/fullScreen" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/fullScreen" />
+        <activity
+            android:name=".TweetActivity"
+            android:exported="false"
+            android:label="Tweet"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/fullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

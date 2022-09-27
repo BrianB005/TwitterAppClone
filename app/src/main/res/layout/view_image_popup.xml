@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:ignore="HardCodedText"
+    android:background="@color/light_black"
+
+
+    >
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:menu="@menu/save_image_menu"
+        android:id="@+id/tool_bar"
+        android:layout_alignParentTop="true"
+
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:maxHeight="600dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/image3"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:layout_centerInParent="true"
+        android:id="@+id/tweet_image"
+
+
+
+
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/buttons"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp">
+
+        <TextView
+            android:id="@+id/open_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:drawablePadding="3dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:padding="3dp"
+            android:text="189"
+            app:drawableLeftCompat="@drawable/chat_outline"
+            app:drawableTint="@color/extra_extra_light_gray"
+
+            />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/retweet_tweet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:drawablePadding="3dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:padding="3dp"
+            android:text="35"
+            app:drawableLeftCompat="@drawable/retweet_white" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/like_tweet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:drawablePadding="3dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:padding="3dp"
+            android:text="24"
+            app:drawableLeftCompat="@drawable/like_white" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/share_tweet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="3dp"
+            app:drawableLeftCompat="@drawable/share"
+            app:drawableTint="@color/extra_extra_light_gray" />
+    </LinearLayout>
+</RelativeLayout>

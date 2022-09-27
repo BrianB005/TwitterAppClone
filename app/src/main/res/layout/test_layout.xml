@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    tools:ignore="HardcodedText"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:backgroundTint="@color/extra_extra_light_gray"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            >
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="30dp"
+                android:focusable="true"
+                android:clickable="true"
+
+                android:background="?attr/selectableItemBackgroundBorderless"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/profile_pic"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@null"
+                    />
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="13dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/whiteText"
+                    android:text="Brian Bett"
+                    android:id="@+id/name"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/greyText.small"
+                    android:text="Brayoo005"
+                    android:id="@+id/username"
+                    android:ellipsize="end"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="13dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tweet_title"
+                android:layout_marginBottom="4dp"
+                android:text="You can't ever reach perfection, but you can believe in an asymptote toward which you are ceaselessly striving.” “Human knowledge is never contained in one person"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:cardCornerRadius="20dp"
+                android:layout_marginVertical="8dp"
+                android:id="@+id/cardView"
+
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:id="@+id/tweet_image"
+
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@null"
+                    />
+                <VideoView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tweet_video"
+                    android:visibility="gone"
+                    />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:paddingVertical="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7:32 PM"
+
+                    style="@style/greyText"
+                    android:id="@+id/tweet_time"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="."
+                    style="@style/greyText"
+                    android:paddingHorizontal="6dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01 sep 22"
+                    style="@style/greyText"
+                    android:id="@+id/tweet_date"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="."
+
+                    style="@style/greyText.small"
+                    android:paddingHorizontal="6dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Twitter for android"
+                    style="@style/greyText.small"
+                    android:paddingHorizontal="6dp"
+                    android:textColor="@color/blue"
+                    android:id="@+id/type_of_os"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="@color/dark_gray"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal"
+                android:paddingVertical="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2243"
+                    style="@style/whiteText.small"
+                    android:paddingHorizontal="6dp"
+                    android:id="@+id/number_of_comments"
+                    android:textSize="18sp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comments"
+                    style="@style/greyText.small"
+                    android:paddingStart="3dp"
+                    android:textSize="18sp"
+                    android:paddingEnd="16dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2243"
+                    style="@style/whiteText.small"
+                    android:textSize="18sp"
+                    android:paddingHorizontal="6dp"
+                    android:id="@+id/number_of_retweets"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Retweets"
+                    style="@style/greyText.small"
+                    android:paddingStart="3dp"
+                    android:paddingEnd="16dp"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="206"
+                    style="@style/whiteText.small"
+                    android:paddingHorizontal="6dp"
+                    android:id="@+id/number_of_likes"
+                    android:textSize="18sp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Likes"
+                    style="@style/greyText.small"
+                    android:paddingStart="3dp"
+                    android:textSize="18sp"
+                    android:paddingEnd="0dp"
+
+
+                    />
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="@color/dark_gray"
+                />
+
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal"
+                android:paddingVertical="7dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:drawableLeftCompat="@drawable/chat_outline"
+                    app:drawableTint="@color/extra_extra_light_gray"
+                    android:id="@+id/open_comments"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:padding="3dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+
+                    />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:drawableLeftCompat="@drawable/retweet"
+                    android:padding="3dp"
+                    android:id="@+id/retweet_tweet"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:drawableLeftCompat="@drawable/like_outline"
+                    android:id="@+id/like_tweet"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:padding="3dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:drawableLeftCompat="@drawable/share"
+
+                    android:id="@+id/share_tweet"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:padding="3dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:drawableTint="@color/extra_extra_light_gray" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:backgroundTint="@color/dark_gray"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/comments_recycler_view"
+                android:visibility="gone"
+                android:layout_above="@+id/bottom"
+                />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/blue"
+                android:id="@+id/progress_view"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:text="This tweet has no comments!"
+                android:layout_centerInParent="true"
+                android:id="@+id/no_comments"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:id="@+id/bottom"
+
+                >
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="3dp"
+                    android:backgroundTint="@color/dark_gray"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="3dp"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/reply_layout"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Replying to  "
+                        style="@style/greyText"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        style="@style/whiteText.small"
+                        android:textColor="@color/blue"
+                        android:id="@+id/reply_username"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:gravity="end"
+                        android:layout_gravity="bottom"
+                        >
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:text="Reply"
+                            android:textColor="@color/extra_light_gray"
+                            android:textAllCaps="false"
+                            app:cornerRadius="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:allowClickWhenDisabled="false"
+                            android:enabled="false"
+                            style="@style/MaterialButtonStyle"
+                            android:id="@+id/reply_btn"
+                            tools:targetApi="s" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="3dp"
+                    android:backgroundTint="@color/dark_gray"
+                    />
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Tweet your reply"
+                        android:textColorHint="@color/dark_gray"
+                        android:background="@android:color/transparent"
+                        android:paddingVertical="14dp"
+                        android:paddingHorizontal="8dp"
+                        android:importantForAutofill="no"
+                        android:textColor="@color/extra_extra_light_gray"
+                        android:textSize="18sp"
+                        android:id="@+id/reply_input"
+                        android:inputType="textMultiLine"
+                        android:paddingEnd="60dp"
+                        android:paddingStart="6dp"
+                        />
+                    <ImageButton
+                        android:id="@+id/comment_image"
+                        android:layout_marginStart="-60dp"
+                        style="?android:buttonBarButtonStyle"
+
+                        android:contentDescription="null"
+                        android:src="@drawable/ic_outline_camera_alt_24"
+                        android:layout_width="35dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="3dp"
+                    android:backgroundTint="@color/dark_gray"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</ScrollView>

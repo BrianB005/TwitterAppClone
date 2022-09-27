@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    tools:ignore="HardcodedText"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackground"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ivy and 3 others retweeted "
+            style="@style/greyText.small"
+            android:paddingHorizontal="20dp"
+            android:id="@+id/retweeted_by"
+            android:visibility="gone"
+
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="4dp"
+            >
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cardCornerRadius="30dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/profile_pic"
+                    android:contentDescription="@null"
+                    />
+            </com.google.android.material.card.MaterialCardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="13dp"
+                android:layout_marginVertical="6dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/whiteText"
+                        android:text="Brian Bett"
+                        android:id="@+id/name"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/greyText.small"
+                        android:text="Brayoo005"
+                        android:paddingHorizontal="6dp"
+                        android:id="@+id/username"
+                        android:ellipsize="end"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/greyText.small"
+                        android:text="."
+                        android:paddingHorizontal="1dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/greyText.small"
+                        android:text="5h"
+                        android:paddingHorizontal="6dp"
+                        android:id="@+id/tweet_time"
+                        android:ellipsize="end"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tweet_title"
+                    android:text="You can't ever reach perfection, but you can believe in an asymptote toward which you are ceaselessly striving.” “Human knowledge is never contained in one person"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginVertical="8dp"
+                    android:id="@+id/cardView"
+
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tweet_image"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@null"
+                        />
+                    <VideoView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tweet_video"
+                        android:visibility="gone"
+                        />
+
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="4dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:drawableLeftCompat="@drawable/chat_outline"
+                        app:drawableTint="@color/extra_extra_light_gray"
+                        android:id="@+id/open_comments"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:padding="3dp"
+                        android:text="189"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="3dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+
+                        />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:drawableLeftCompat="@drawable/retweet_white"
+                        android:padding="3dp"
+                        android:gravity="center_vertical"
+                        android:id="@+id/retweet_tweet"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:text="35"
+                        android:drawablePadding="3dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:drawableLeftCompat="@drawable/like_white"
+
+                        android:id="@+id/like_tweet"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="3dp"
+                        android:text="24"
+                        android:drawablePadding="3dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:drawableLeftCompat="@drawable/share"
+                        app:drawableTint="@color/extra_extra_light_gray"
+                        android:id="@+id/share_tweet"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:padding="3dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:backgroundTint="@color/light_gray"
+        />
+
+</LinearLayout>

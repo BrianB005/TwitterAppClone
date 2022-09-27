@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MyProfileActivity"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:ignore="HardcodedText"
+    tools:viewBindingIgnore="true"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:fitsSystemWindows="true"
+            android:layout_height="152dp"
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/dark_gray"
+            app:statusBarScrim="@color/black"
+
+
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/header_pic"
+                android:scaleType="centerCrop"
+                android:contentDescription="@null"
+                app:layout_collapseMode="parallax"
+                />
+            <com.google.android.material.appbar.MaterialToolbar
+                android:background="@android:color/transparent"
+                app:menu="@menu/my_profile_menu"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="30dp"
+                app:popupTheme="@color/dark_gray"
+                app:navigationIcon="?attr/homeAsUpIndicator"
+                android:id="@+id/tool_bar"
+
+                app:layout_collapseMode="pin"
+
+                />
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp"
+            android:id="@+id/top_content"
+
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:cardCornerRadius="50dp"
+                    android:elevation="30dp"
+
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/profile_pic"
+                        />
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="end">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/edit_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:elevation="30dp"
+                        android:outlineAmbientShadowColor="@color/extra_extra_light_gray"
+                        android:outlineSpotShadowColor="@color/extra_extra_light_gray"
+                        android:shadowColor="@color/extra_extra_light_gray"
+                        android:text="Edit Profile"
+                        android:textAllCaps="false"
+                        android:textColor="@color/extra_extra_light_gray"
+                        app:cornerRadius="30dp"
+                        tools:targetApi="p" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/whiteText"
+                android:layout_marginTop="8dp"
+                android:text="Brian Bett"
+                android:id="@+id/name"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/greyText"
+                android:text="Brayoo005"
+                android:id="@+id/username"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/whiteText.small"
+                android:id="@+id/profile_description"
+                android:paddingVertical="5dp"
+                android:text="You can't ever reach perfection, but you can believe in an asymptote toward which you are ceaselessly striving."/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/greyText.small"
+                    android:layout_marginTop="8dp"
+                    android:text="Eldoret Kenya"
+                    android:id="@+id/location"
+                    android:layout_marginEnd="4dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    app:drawableLeftCompat="@drawable/ic_baseline_location_on_24"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/greyText.small"
+                    android:layout_marginTop="8dp"
+                    android:text="Born January 23,2000"
+                    android:id="@+id/date_of_birth"
+                    android:layout_marginEnd="4dp"
+                    app:drawableLeftCompat="@drawable/ic_baseline_color_lens_24"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/greyText.small"
+                android:layout_marginTop="8dp"
+                android:text="Joined January 2020"
+                android:gravity="center_vertical"
+                android:id="@+id/joined_on"
+                android:layout_marginEnd="4dp"
+                app:drawableLeftCompat="@drawable/ic_baseline_calendar_today_24"
+                android:drawablePadding="5dp"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/open_following"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingVertical="7dp"
+                    android:paddingHorizontal="4dp"
+                    android:background="?attr/selectableItemBackground"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="136"
+                        style="@style/whiteText.small"
+                        android:id="@+id/following"
+
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Following"
+
+                        style="@style/greyText.small"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="14dp"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/open_followers"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingVertical="7dp"
+                    android:paddingHorizontal="5dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="112"
+                        style="@style/whiteText.small"
+                        android:id="@+id/followers"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Followers"
+                        style="@style/greyText.small"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="14dp"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorAnimationMode="fade"
+                app:tabIndicatorColor="@color/blue"
+                app:tabIndicatorHeight="4dp"
+                android:background="@color/black"
+                app:tabTextAppearance="@style/notAllCaps"
+                app:tabMode="fixed"
+                app:tabTextColor="@color/extra_extra_light_gray"
+                app:layout_collapseMode="pin"
+                android:elevation="0dp"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                android:outlineSpotShadowColor="@color/extra_extra_light_gray"
+                android:outlineAmbientShadowColor="@color/extra_extra_light_gray"
+                tools:targetApi="p">
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Tweets"
+                    android:id="@+id/tweets"
+
+                    />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:id="@+id/tweets_and_replies"
+                    android:text="Tweets &amp; replies"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/media"
+                    android:text="Media"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/likes"
+                    android:text="Likes"/>
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/container"
+                />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

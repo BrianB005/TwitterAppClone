@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardCodedText"
+
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackground"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="6dp"
+        > <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Follows you"
+
+        app:drawableLeftCompat="@drawable/ic_baseline_person_outline_24"
+        style="@style/greyText.small"
+        android:gravity="center_vertical"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="3dp"
+        android:id="@+id/follows_you"
+        android:visibility="gone"
+        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:paddingHorizontal="10dp"
+
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:cardCornerRadius="40dp"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:contentDescription="profile pic"
+                    android:id="@+id/profile_pic"
+                    android:elevation="30dp"
+                    />
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="7dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ivy Cherop"
+                            android:id="@+id/name"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CheropIvy"
+                            android:id="@+id/username"
+                            style="@style/greyText.small"
+                            />
+                    </LinearLayout>
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        />
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Follow"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/extra_extra_light_gray"
+                        app:cornerRadius="20dp"
+                        android:textAllCaps="false"
+                        android:layout_gravity="end"
+                        android:id="@+id/follow_btn"
+
+                        />
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Follow Back"
+                        android:textColor="@color/extra_extra_light_gray"
+                        android:backgroundTint="@color/dark_gray"
+
+                        app:cornerRadius="20dp"
+                        android:textAllCaps="false"
+                        android:layout_gravity="end"
+                        android:id="@+id/follow_back_btn"
+                        android:visibility="gone"
+
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Following"
+                        android:layout_marginEnd="10dp"
+                        android:id="@+id/following_btn"
+                        android:textColor="@color/extra_extra_light_gray"
+
+                        android:backgroundTint="@color/black"
+                        app:cornerRadius="20dp"
+                        android:textAllCaps="false"
+                        android:layout_gravity="end"
+                        android:outlineSpotShadowColor="@color/extra_extra_light_gray"
+                        android:visibility="gone"
+                        tools:targetApi="p" />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You can't ever reach perfection but you can believe in an assymptote towards which you ceaselessly strive"
+                    android:id="@+id/profile_description"
+                    android:lines="2"
+                    android:ellipsize="end"
+
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="6dp"
+        android:backgroundTint="@color/extra_extra_light_gray"/>
+
+
+
+</LinearLayout>

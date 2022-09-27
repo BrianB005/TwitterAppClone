@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFollowersActivity"
+    tools:ignore="HardCodedText"
+    android:paddingHorizontal="5dp"
+    android:paddingVertical="10dp"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Follow accounts for more content!"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="When you follow someone you'll see their tweets on your Timeline. You'll also get more relevant recommendations."
+        style="@style/greyText.small"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You may be interested in"
+        android:layout_marginBottom="10dp"
+        android:textSize="23sp"
+
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/users_recycler_view"
+        android:visibility="gone"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="No followers to show!"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        tools:ignore="HardcodedText"
+        android:id="@+id/no_users"
+        android:layout_marginTop="80dp"
+        android:visibility="gone"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/blue"
+        android:id="@+id/progress_view"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+
+
+
+        />
+
+</LinearLayout>

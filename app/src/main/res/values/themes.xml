@@ -1,0 +1,132 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Twitter" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/dark_gray</item>
+        <item name="colorOnPrimary">@color/extra_extra_light_gray</item>
+        <item name="android:textColorPrimary">@color/extra_extra_light_gray</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/dark_gray</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/extra_extra_light_gray</item>
+        <item name="colorSurface">@color/black</item>
+        <item name="colorOnSurface">@color/extra_extra_light_gray</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="colorOutline">@color/extra_extra_light_gray</item>
+        <item name="itemBackground">?attr/colorPrimary</item>
+        <item name="android:colorBackground">?attr/colorPrimary</item>
+
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+
+
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/black</item>
+
+        <item name="android:textColor">@color/extra_extra_light_gray</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="itemIconTint">@color/extra_extra_light_gray</item>
+
+        <item name="android:windowActivityTransitions">true</item>
+
+        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+
+
+
+    </style>
+    <style name="OverFlow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_baseline_person_add_alt_1_24</item>
+    </style>
+    <style name="Theme.Twitter.customized_overflow" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:actionOverflowButtonStyle">@style/OverFlow</item>
+    </style>
+
+
+
+    <style name="notFullScreen" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+         <item name="colorPrimary">@color/black</item>
+         <item name="colorPrimaryVariant">@color/dark_gray</item>
+         <item name="colorOnPrimary">@color/extra_extra_light_gray</item>
+         <item name="android:textColorPrimary">@color/extra_extra_light_gray</item>
+         <!-- Secondary brand color. -->
+         <item name="colorSecondary">@color/dark_gray</item>
+         <item name="colorSecondaryVariant">@color/black</item>
+         <item name="colorOnSecondary">@color/extra_extra_light_gray</item>
+         <item name="colorSurface">@color/black</item>
+         <item name="colorOnSurface">@color/extra_extra_light_gray</item>
+         <item name="colorAccent">@color/blue</item>
+         <item name="colorOutline">@color/extra_extra_light_gray</item>
+         <item name="itemBackground">?attr/colorPrimary</item>
+         <item name="android:colorBackground">?attr/colorPrimary</item>
+
+
+
+         <item name="android:textColor">@color/extra_extra_light_gray</item>
+         <item name="android:textStyle">normal</item>
+         <item name="android:textSize">20sp</item>
+         <item name="fontFamily">sans-serif-medium</item>
+         <item name="itemIconTint">@color/extra_extra_light_gray</item>
+         <item name="android:windowActivityTransitions">true</item>
+
+         <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+         <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+
+
+
+    </style>
+    <style name="fullScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <style name="TabLayoutTheme">
+        <item name="tabBackground">@color/black</item>
+        <item name="tabIconTint">@color/light_gray</item>
+        <item name="tabIndicator">?attr/colorOnPrimary</item>
+        <item name="tabSelectedTextColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="whiteText">
+        <item name="android:textColor">@color/extra_extra_light_gray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="greyText">
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="whiteText.small">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="greyText.small">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="cardView">
+
+        <item name="cardCornerRadius">60dp</item>
+    </style>
+
+    <style name="notAllCaps" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+    <style name="MaterialButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="backgroundTint">@color/material_button</item>
+    </style>
+    <style name="bottomIndicator">
+
+        <item name="itemIconTint">@color/dark_gray</item>
+    </style>
+
+</resources>
+

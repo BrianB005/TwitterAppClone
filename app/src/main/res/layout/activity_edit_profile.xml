@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText"
+    >
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        android:id="@+id/tool_bar"
+        app:menu="@menu/edit_profile_menu"
+        app:title="Edit Profile"
+
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/header_pic"
+                    />
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_baseline_photo_camera_24"
+                    android:layout_gravity="center"
+                    app:tint="@color/blue"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Change header"
+                    android:id="@+id/change_header"
+
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Upload"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/blue"
+                    app:cornerRadius="10dp"
+                    android:id="@+id/upload_header"
+                    android:visibility="gone"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                   app:drawableLeftCompat="@drawable/close"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/dark_gray"
+                    app:cornerRadius="10dp"
+                    android:layout_margin="20dp"
+                    android:id="@+id/cancel_header_upload"
+                    tools:targetApi="m"
+                    app:drawableTint="@android:color/holo_red_dark"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    />
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="7dp"
+                android:translationZ="20dp"
+                android:layout_marginTop="-30dp"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="15dp"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:cardCornerRadius="50dp"
+                        android:layout_marginEnd="20dp"
+
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:scaleType="centerCrop"
+                            android:contentDescription="profile pic"
+                            android:id="@+id/profile_pic"
+                            />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_baseline_photo_camera_24"
+                            android:layout_gravity="center"
+
+
+                            app:tint="@color/blue"
+                            android:background="@android:color/transparent"
+                            android:contentDescription="Change profile"
+                            android:id="@+id/change_profile"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="Upload"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/blue"
+                        app:cornerRadius="10dp"
+
+                        android:id="@+id/upload_profile_pic"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        app:drawableLeftCompat="@drawable/close"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/dark_gray"
+                        app:cornerRadius="10dp"
+                        android:layout_marginStart="20dp"
+                        android:id="@+id/cancel_profile_upload"
+                        tools:targetApi="m"
+                        android:clickable="true"
+                        android:visibility="gone"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        app:drawableTint="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    style="@style/greyText"
+                    android:paddingVertical="3dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:text="Brian Bett"
+                    android:id="@+id/change_name"
+                    android:autofillHints="@null"
+                    android:paddingVertical="8dp"
+                    android:labelFor="@null"
+                    android:background="@android:color/transparent"
+                    tools:ignore="LabelFor" />
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:backgroundTint="@color/light_gray"
+                    android:layout_marginBottom="4dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    style="@style/greyText"
+                    android:paddingVertical="3dp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        app:drawableLeftCompat="@drawable/ic_baseline_alternate_email_24" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:text="Brayoo005"
+                        android:id="@+id/change_user_name"
+                        android:autofillHints="@null"
+                        android:paddingVertical="8dp"
+                        android:labelFor="@null"
+                        android:background="@android:color/transparent"
+
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:backgroundTint="@color/light_gray"
+                    android:layout_marginBottom="4dp"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bio"
+                    style="@style/greyText"
+                    android:paddingVertical="4dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:text="Arsenal fan Aspiring software developer"
+                    android:id="@+id/change_description"
+                    android:autofillHints="@null"
+                    android:paddingVertical="8dp"
+
+                    android:background="@android:color/transparent"
+                    tools:ignore="LabelFor" />
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:backgroundTint="@color/dark_gray"
+                    android:layout_marginVertical="4dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    style="@style/greyText"
+                    android:paddingVertical="4dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+
+                    android:text="Eldoret Kenya"
+                    android:id="@+id/change_location"
+                    android:autofillHints="@null"
+                    android:paddingVertical="8dp"
+                    android:labelFor="@null"
+                    android:background="@android:color/transparent"
+                    tools:ignore="LabelFor" />
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:backgroundTint="@color/dark_gray"
+                    android:layout_marginVertical="4dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Website"
+                    style="@style/greyText"
+                    android:paddingVertical="4dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/change_website"
+                    android:autofillHints="@null"
+                    android:paddingVertical="8dp"
+                    android:labelFor="@null"
+                    android:background="@android:color/transparent"
+                    tools:ignore="LabelFor"
+                    android:inputType="text"
+
+                    />
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:backgroundTint="@color/dark_gray"
+                    android:layout_marginVertical="4dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Birth date"
+                    style="@style/greyText"
+                    android:paddingVertical="4dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="January 23,2000"
+                    android:id="@+id/change_birth_date"
+                    android:autofillHints="@null"
+                    android:paddingVertical="8dp"/>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:backgroundTint="@color/dark_gray"
+                    android:layout_marginTop="4dp"
+
+
+                    />
+
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingVertical="14dp"-->
+<!--                    android:text="Update"-->
+<!--                    android:paddingHorizontal="80dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginBottom="30dp"-->
+<!--                    android:backgroundTint="@color/blue"-->
+<!--                    app:cornerRadius="20dp"-->
+<!--                    android:id="@+id/update_details"-->
+<!--                    />-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

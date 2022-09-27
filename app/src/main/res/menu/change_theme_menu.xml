@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    tools:ignore="HardcodedText"
+    >
+
+    <group
+        android:id="@+id/menu_title">
+        <item android:title="Dark Mode"/>
+    </group>
+    <group android:id="@+id/change_theme"
+        android:checkableBehavior="single">
+        <item
+            android:title="Off"
+            android:id="@+id/dark_mode_off"
+
+            />
+        <item
+            android:title="On"
+            android:id="@+id/dark_mode_on"
+
+            />
+        <item
+            android:title="Automatic at sunset"
+            android:id="@+id/dark_mode_at_sunset"
+            />
+
+    </group>
+    <group
+        android:id="@+id/theme"
+        android:checkableBehavior="single"
+
+        >
+        <item android:id="@+id/subtitle"
+            android:title="Dark theme">
+            <menu>
+                <item android:title="Dim"
+                    android:id="@+id/dim_theme"/>
+                <item android:title="Lights out"
+                    android:id="@+id/lights_out_theme"/>
+            </menu>
+        </item>
+
+    </group>
+</menu>

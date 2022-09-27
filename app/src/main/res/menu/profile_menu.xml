@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="HardcodedText"
+    >
+
+    <item
+        android:title="Search"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_search_24"
+
+        android:id="@+id/search_profile"
+        />
+
+    <item
+        android:title="Share"
+        app:showAsAction="never"
+
+
+        android:id="@+id/share"
+        />
+    <item
+        android:title="Turn off retweets"
+        app:showAsAction="never"
+
+        />
+    <item
+        android:title="View topics"
+        app:showAsAction="never"
+
+        />
+    <item
+        android:title="Add/remove from lists"
+        app:showAsAction="never"
+
+        />
+    <item
+        android:title="View lists"
+        app:showAsAction="never"
+        />
+    <item
+        android:title="Lists they're on"
+        app:showAsAction="never"
+        />
+    <item
+        android:title="View moments"
+        app:showAsAction="never"
+        />
+    <item
+        android:title="Mute"
+        app:showAsAction="never"
+
+        />
+    <item
+        android:title="Block"
+        app:showAsAction="never"
+
+        />
+
+</menu>

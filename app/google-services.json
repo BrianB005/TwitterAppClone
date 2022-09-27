@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "112529231598",
+    "project_id": "twitter-b76c3",
+    "storage_bucket": "twitter-b76c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112529231598:android:016799c2b93273824f6dff",
+        "android_client_info": {
+          "package_name": "com.brianbett.twitter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112529231598-04usvi6te5qa1jaruqoe5onthbor9gd7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJFt3JazDQZlQT2wm_UORGI7o2_y6TJr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112529231598-04usvi6te5qa1jaruqoe5onthbor9gd7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,67 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingVertical="7dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableLeftCompat="@drawable/chat_outline"
+        app:drawableTint="@color/extra_extra_light_gray"
+        android:id="@+id/open_comments"
+        android:focusable="true"
+        android:clickable="true"
+        android:padding="3dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+
+        />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableLeftCompat="@drawable/retweet"
+        app:drawableTint="@color/extra_extra_light_gray"
+
+        android:padding="3dp"
+        android:id="@+id/retweet_tweet"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        />
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableLeftCompat="@drawable/like_outline"
+        app:drawableTint="@color/extra_extra_light_gray"
+        android:id="@+id/like_tweet"
+        android:focusable="true"
+        android:clickable="true"
+        android:padding="3dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        />
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableLeftCompat="@drawable/share"
+        app:drawableTint="@color/extra_extra_light_gray"
+        android:id="@+id/share_tweet"
+        android:focusable="true"
+        android:clickable="true"
+        android:padding="3dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        />
+</LinearLayout>

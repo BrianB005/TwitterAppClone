@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivityFive"
+    tools:ignore="HardcodedText"
+    android:paddingHorizontal="15dp"
+    android:paddingTop="35dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect your address book to find people you may know on Twitter"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:textSize="20sp"
+       />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+
+        >
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
+            app:cornerRadius="20dp"
+            android:text="Sync contacts"
+            android:textAllCaps="false"
+            android:textColor="@color/extra_light_gray"
+            android:textSize="15sp"
+            android:id="@+id/sync_contacts"
+            android:layout_gravity="center"
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_gravity="center"
+            app:cornerRadius="20dp"
+            android:text="Not now"
+            android:textAllCaps="false"
+            android:textColor="@color/blue"
+            android:textSize="15sp"
+            android:id="@+id/not_now"
+
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" android:text="Contacts from your address book will be uploaded to Twitter on an ongoing basis to help connect you with your friends and personalize content ,such as making suggestions for you and others.You can turn off syncing and remove previously uploaded contacts in your settings"
+        android:layout_marginBottom="10dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FollowersActivity"
+    android:orientation="vertical"
+
+    >
+    <com.google.android.material.appbar.MaterialToolbar
+        android:background="@android:color/transparent"
+        app:menu="@menu/following_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="30dp"
+        app:popupTheme="@color/dark_gray"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        android:id="@+id/tool_bar"
+        app:title="Followers"
+        android:outlineAmbientShadowColor="@color/extra_extra_light_gray"
+        tools:targetApi="p" />
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/users_recycler_view"
+       android:visibility="gone"
+       />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+
+      android:text="No followers to show!"
+      android:gravity="center"
+      android:layout_gravity="center_vertical"
+
+      android:layout_marginTop="200dp"
+      android:textStyle="bold"
+      android:textSize="30sp"
+      tools:ignore="HardcodedText"
+      android:id="@+id/no_followers"
+      android:visibility="gone"
+
+      />
+
+   <ProgressBar
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+      android:indeterminateTint="@color/blue"
+      android:id="@+id/progress_view"
+       android:layout_marginTop="250dp"
+       android:layout_gravity="center"
+
+
+      />
+
+
+</LinearLayout>
