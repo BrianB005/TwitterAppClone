@@ -1,11 +1,17 @@
 package com.brianbett.twitter;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Gravity;
@@ -19,8 +25,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.brianbett.twitter.databinding.SingleTweetBinding;
@@ -37,6 +46,8 @@ import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Date;
 import java.util.ArrayList;
 
@@ -64,6 +75,7 @@ public class TimelineTweetsRecyclerViewAdapter extends RecyclerView.Adapter<Time
         return new MyViewHolder(singleTweetBinding);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
@@ -95,13 +107,6 @@ public class TimelineTweetsRecyclerViewAdapter extends RecyclerView.Adapter<Time
                     toolbar.setOnMenuItemClickListener(item -> {
                         if(item.getItemId()==R.id.save_image){
 
-                            ContentValues values=new ContentValues();
-                            values.put(MediaStore.Images.Media.TITLE,"New photo");
-                            values.put(MediaStore.Images.Media.DISPLAY_NAME,"Twitter");
-
-                            values.put(MediaStore.Images.Media.DESCRIPTION,"A great picture");
-
-                            context.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,values);
                             Toast.makeText(context,"Image saved",Toast.LENGTH_SHORT).show();
                         }
                         return false;
